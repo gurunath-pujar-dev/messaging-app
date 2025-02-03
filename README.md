@@ -20,7 +20,7 @@ Syncronus-Chat-App is a full-stack real-time chat application built to enable se
 - **Socket.IO Client**: For real-time communication.
 - **Zustand**: For state management.
 - **Axios**: For making HTTP requests.
-- **Radix UI**: For accessible UI components.
+- **Shadcn UI**: For dynamic UI components.
 - **Vite**: For fast development and build processes.
 
 ### Backend
@@ -48,7 +48,6 @@ To get a local copy up and running, follow these steps:
 
 ```bash
 git clone https://github.com/gurunath-pujar-dev/messaging-app.git
-cd Syncronus-Chat-App
 ```
 
 ### Setup Backend
@@ -65,11 +64,14 @@ cd server
 npm install
 ```
 
-- Create a .env file and add your MongoDB URI and JWT secret:
+- Create a .env file :
 
 ```bash
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
+PORT = <server_port>
+JWT_KEY = <secret_key>
+ORIGIN = "http://localhost:5173"
+DATABASE_URL = <your_mongodb_uri>
+JWT_SECRET = <your_jwt_secret>
 ```
 
 - Start the server:
@@ -90,6 +92,12 @@ cd client
 
 ```bash
 npm install
+```
+
+- Create a .env file :
+
+```bash
+VITE_SERVER_URL = <your_server_url>
 ```
 
 - Start the development server:
